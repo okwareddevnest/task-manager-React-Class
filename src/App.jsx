@@ -20,7 +20,7 @@ function App() {
   // ✅ Add a new task
   function addTask(text) {
     if (!text.trim()) return;
-    const newTask = { id: Date.now(), text, completed: false };
+    const newTask = { id: Date.now(), text, completed: false, createdAt: new Date().toLocaleString() };
     setTasks((prevTasks) => [...prevTasks, newTask]);
   }
 

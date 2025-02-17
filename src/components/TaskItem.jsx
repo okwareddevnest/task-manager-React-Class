@@ -9,6 +9,7 @@ function TaskItem({ task, toggleComplete, deleteTask }) {
         onChange={() => toggleComplete(task.id)}
       />
       <span>{task.text}</span>
+      <span>{task.createdAt}</span>
       <button onClick={() => deleteTask(task.id)}>Delete</button>
     </div>
   );
